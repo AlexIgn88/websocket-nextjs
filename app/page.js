@@ -15,7 +15,9 @@ const HomePage = () => {
       return;
     }
 
-    const socket = new WebSocket(`ws://${window.location.hostname}:3001/`);
+    let wsServerPath = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+
+    const socket = new WebSocket(`${wsServerPath}//${window.location.hostname}:3001/`);
 
     socket.onopen = () => {
       console.log('WebSocket connection established');
