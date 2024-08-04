@@ -14,3 +14,7 @@ https://websocket-nextjs.vercel.app
 
 При этом у пользователя открывается Websocket соединение с приложением. 
 В это соединение Next.JS направляет сообщение со значением key каждые 5 секунд.
+
+Сохранены в .env файле в корне проекта. Сам файл исключен из проекта, но добавлен пустой env.example
+DB_PARAMETER=key
+DB_PASSWORD=mypassword
