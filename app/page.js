@@ -15,7 +15,7 @@ const HomePage = () => {
       return;
     }
 
-    const socket = new WebSocket('ws://localhost:3001/');
+    const socket = new WebSocket(`ws://${window.location.hostname}:3001/`);
 
     socket.onopen = () => {
       console.log('WebSocket connection established');
